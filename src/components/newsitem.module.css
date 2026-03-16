@@ -1,0 +1,11 @@
+.badgeContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+}
+
+.newsItem {
+  width: 100%;
+  max-width: 600px;
+}

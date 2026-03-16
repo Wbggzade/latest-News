@@ -1,0 +1,16 @@
+.endMessage {
+  text-align: center;
+}
+
+.newsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.newsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
