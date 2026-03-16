@@ -1,18 +1,33 @@
-# React + Vite
+# Latest News
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive news application built with React and Vite.
 
-Currently, two official plugins are available:
+The app fetches live news articles by category and supports infinite scrolling for loading more content as the user browses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Browse news by category
+- Infinite scroll for article loading
+- Environment-based API key setup with `.env`
+- React component-based architecture
+- Built with Vite for fast local development
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- React
+- Vite
+- React Router DOM
+- CSS Modules
+- NewsData API
+- react-infinite-scroll-component
 
-## Expanding the ESLint configuration
+## Current Project Status
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is currently in active development.
+
+Implemented so far:
+- React + Vite setup
+- News fetching logic
+- Infinite scroll integration
+- Category-based navigation structure
+- Environment variable API key usage
