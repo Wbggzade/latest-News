@@ -1,23 +1,36 @@
-import React from 'react';
-import styles from './newsitem.module.css';
+import React from "react";
+import styles from "./newsitem.module.css";
 
-const NewsItem = (props) => {
-    let { title, desc, imageURL, newsUrl, sourceName } = props;
-    return (
-        <div className={`my-3 ${styles.newsItem}`}>
-            <div className="card">
-                <div className={styles.badgeContainer}>
-                    <span className="badge rounded-pill bg-danger"> {sourceName} </span>
-                </div>
-                <img src={!imageURL ? "https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg" : imageURL} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">{title}  </h5>
-                    <p className="card-text">{desc}</p>
-                    <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-dark">Read More</a>
-                </div>
-            </div>
-        </div>
-    )
-}
+const NewsItem = ({ title, desc, imageURL, newsUrl, sourceName }) => {
+	return (
+		<article className={styles.newsItem}>
+			<div className={styles.card}>
+				<div className={styles.badgeContainer}>
+					<span className={styles.badge}>{sourceName}</span>
+				</div>
+				<img
+					className={styles.image}
+					src={
+						imageURL ||
+						"https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg"
+					}
+					alt={title || "News image"}
+				/>
+				<div className={styles.body}>
+					<h3 className={styles.title}>{title}</h3>
+					<p className={styles.description}>{desc}</p>
+					<a
+						rel="noreferrer"
+						href={newsUrl}
+						target="_blank"
+						className={styles.button}
+					>
+						Read more
+					</a>
+				</div>
+			</div>
+		</article>
+	);
+};
 
 export default NewsItem;

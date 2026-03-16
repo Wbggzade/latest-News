@@ -1,11 +1,106 @@
-.badgeContainer {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  right: 0;
-}
-
 .newsItem {
   width: 100%;
-  max-width: 600px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+}
+
+.badgeContainer {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(220, 38, 38, 0.9);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  object-position: center;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.body {
+  padding: 1.1rem 1.15rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  margin: 0;
+  color: rgba(55, 65, 81, 0.85);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.9);
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.button:hover {
+  background: rgba(17, 24, 39, 0.75);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 540px) {
+  .image {
+    height: 170px;
+  }
 }
